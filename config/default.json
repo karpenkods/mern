@@ -1,0 +1,6 @@
+{
+  "port": 5000,
+  "jwtSecret": "pomodoro_box_app",
+  "mongoUri": "mongodb+srv://karpenkods:kds340560@cluster0.sh03j.mongodb.net/app?retryWrites=true&w=majority",
+  "baseUrl": "http://localhost:5000"
+}
