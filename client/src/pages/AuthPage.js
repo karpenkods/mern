@@ -1,14 +1,15 @@
-import React, {useContext, useEffect, useState} from 'react'
-import {useHttp} from '../hooks/http.hook'
-import {useMessage} from '../hooks/message.hook'
-import {AuthContext} from '../context/AuthContext'
+import React, { useContext, useEffect, useState } from 'react'
+import { useHttp } from '../hooks/http.hook'
+import { useMessage } from '../hooks/message.hook'
+import { AuthContext } from '../context/AuthContext'
 
 export const AuthPage = () => {
   const auth = useContext(AuthContext)
   const message = useMessage()
-  const {loading, request, error, clearError} = useHttp()
+  const { loading, request, error, clearError } = useHttp()
   const [form, setForm] = useState({
-    email: '', password: ''
+    email: '',
+    password: '',
   })
 
   useEffect(() => {
@@ -20,20 +21,20 @@ export const AuthPage = () => {
     window.M.updateTextFields()
   }, [])
 
-  const changeHandler = event => {
+  const changeHandler = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value })
   }
 
   const registerHandler = async () => {
     try {
-      const data = await request('/api/auth/register', 'POST', {...form})
+      const data = await request('/api/auth/register', 'POST', { ...form })
       message(data.message)
     } catch (e) {}
   }
 
   const loginHandler = async () => {
     try {
-      const data = await request('/api/auth/login', 'POST', {...form})
+      const data = await request('/api/auth/login', 'POST', { ...form })
       auth.login(data.token, data.userId)
     } catch (e) {}
   }
@@ -46,7 +47,6 @@ export const AuthPage = () => {
           <div className="card-content white-text">
             <span className="card-title">Авторизация</span>
             <div>
-
               <div className="input-field">
                 <input
                   placeholder="Введите email"
@@ -72,13 +72,12 @@ export const AuthPage = () => {
                 />
                 <label htmlFor="email">Пароль</label>
               </div>
-
             </div>
           </div>
           <div className="card-action">
             <button
               className="btn yellow darken-4"
-              style={{marginRight: 10}}
+              style={{ marginRight: 10 }}
               disabled={loading}
               onClick={loginHandler}
             >

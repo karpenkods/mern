@@ -5,6 +5,7 @@
   "main": "app.js",
   "author": "\"Karpenko Dmitrii\" <karpenkods2011@gmail.com>",
   "license": "ISC",
+  "homepage": "https://karpenkods.github.io/mern/",
   "scripts": {
     "start": "cross-env NODE_ENV=production node app.js",
     "server": "nodemon app.js",
@@ -19,6 +20,7 @@
     "config": "^3.2.4",
     "express": "^4.17.1",
     "express-validator": "^6.3.0",
+    "gh-pages": "^3.2.3",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.8.1",
     "shortid": "^2.2.15"

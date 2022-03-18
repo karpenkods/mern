@@ -1,9 +1,9 @@
 import React from 'react'
-import {Switch, Route, Redirect} from 'react-router-dom'
-import {CreatePage} from './pages/CreatePage'
-import {AuthPage} from './pages/AuthPage'
+import { Switch, Route, Redirect } from 'react-router-dom'
+import { CreatePage } from './pages/CreatePage'
+import { AuthPage } from './pages/AuthPage'
 
-export const useRoutes = isAuthenticated => {
+export const useRoutes = (isAuthenticated) => {
   if (isAuthenticated) {
     return (
       <Switch>

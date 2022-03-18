@@ -32,7 +32,10 @@ export const CreatePage = () => {
   return (
     <div>
       <h3>Здесь может быть любой проект</h3>
-          <img src="https://gagz.ru/wp-content/uploads/2020/11/screenshot_20201125-174508__01-1024x963.jpg" alt="Картинка" />
+      <img
+        src="https://gagz.ru/wp-content/uploads/2020/11/screenshot_20201125-174508__01-1024x963.jpg"
+        alt="Картинка"
+      />
     </div>
   )
 }
