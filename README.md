@@ -1,5 +1,9 @@
-Скачать проект, установить зависимости "npm install", запустить "npm run dev".
+## _MERN_	
 
-MERN Стек (Mongo, Express, React, Node).
-
+#### Mongo, Express, React, NodeJs. 
+***
+##### Скачать проект, установить зависимости "npm install", запустить "npm run dev".
+***
 Реализация авторизации и регистрации по JWT токену.
+
+
